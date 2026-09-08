@@ -79,8 +79,8 @@
     <h1>Software Developer</h1>
   </div>
 
-  <p>GEMAAKT DOOR: vul hier je naam in</p>
-  <p>JAAR: 1</p>
+  <p>GEMAAKT DOOR: vul hier je naam in.</p>
+  <p>JAAR:1</p>
   <p>NIVEAU: 4</p>
   <p>Mijn ervaring</p>
   <p>Open dagen</p>
