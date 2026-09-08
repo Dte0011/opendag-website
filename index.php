@@ -4,8 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Software Developer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      color: #0b3d2e;
+    }
+  </style>
 </head>
 <body>
+
   <h2>curio</h2>
   <p>MBO VMBO CONTACT</p>
 
@@ -32,5 +40,6 @@
   <footer>
     <?php echo date("Y"); ?> Curio Software Developer
   </footer>
+
 </body>
 </html>
