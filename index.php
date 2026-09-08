@@ -29,13 +29,6 @@
       font-weight: bold;
     }
 
-    .menu {
-      background-color: #f9c800;
-      color: #0b3d2e;
-      padding: 10px 15px;
-      font-weight: bold;
-    }
-
     .nav-links {
       display: flex;
       flex-wrap: wrap;
@@ -49,13 +42,29 @@
       font-size: 14px;
       white-space: nowrap;
     }
+
+    .hero {
+      background-color: #0b3d2e;
+      color: #f9c800;
+      padding: 30px 20px;
+    }
+
+    .hero .breadcrumb {
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      margin: 0 0 20px 0;
+    }
   </style>
 </head>
 <body>
 
   <div class="navbar">
     <div class="left">
-      <div class="menu">☰</div>
       <div class="logo">curio</div>
     </div>
     <div class="nav-links">
@@ -65,10 +74,13 @@
     </div>
   </div>
 
-  <h1>Software Developer</h1>
-  <p>Home Open dag Software Developer</p>
-  <p>GEMAAKT DOOR: Timo van Eck</p>
-  <p>JAAR: 2</p>
+  <div class="hero">
+    <p class="breadcrumb">Home Open dag Software Developer</p>
+    <h1>Software Developer</h1>
+  </div>
+
+  <p>GEMAAKT DOOR: vul hier je naam in</p>
+  <p>JAAR: 1</p>
   <p>NIVEAU: 4</p>
   <p>Mijn ervaring</p>
   <p>Open dagen</p>
