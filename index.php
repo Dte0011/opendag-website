@@ -59,6 +59,34 @@
       font-size: 28px;
       margin: 0 0 20px 0;
     }
+
+    .hero .info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .hero .info span {
+      display: block;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .knoppen {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .knop {
+      background-color: #f9c800;
+      color: #0b3d2e;
+      padding: 14px 20px;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -77,13 +105,16 @@
   <div class="hero">
     <p class="breadcrumb">Home Open dag Software Developer</p>
     <h1>Software Developer</h1>
+    <div class="info">
+      <span>GEMAAKT DOOR<br>vul hier je naam in</span>
+      <span>JAAR<br>1</span>
+      <span>NIVEAU<br>4</span>
+    </div>
+    <div class="knoppen">
+      <a class="knop" href="#vakken">Mijn ervaring ↗</a>
+      <a class="knop" href="https://curio.nl" target="_blank">Open dagen ↗</a>
+    </div>
   </div>
-
-  <p>GEMAAKT DOOR: vul hier je naam in.</p>
-  <p>JAAR:1</p>
-  <p>NIVEAU: 4</p>
-  <p>Mijn ervaring</p>
-  <p>Open dagen</p>
 
   <h2>In het kort</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam ducimus consectetur optio dolore, dolorum sint magni minima temporibus sit voluptates officiis unde ex accusantium odio natus nam ea maiores!</p>
