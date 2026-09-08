@@ -10,12 +10,60 @@
       font-family: Arial;
       color: #0b3d2e;
     }
+
+    .navbar {
+      background-color: #0b3d2e;
+      color: #f9c800;
+      padding: 15px 20px;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .menu {
+      background-color: #f9c800;
+      color: #0b3d2e;
+      padding: 10px 15px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #f9c800;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
 
-  <h2>curio</h2>
-  <p>MBO VMBO CONTACT</p>
+  <div class="navbar">
+    <div class="left">
+      <div class="menu">☰</div>
+      <div class="logo">curio</div>
+    </div>
+    <div class="nav-links">
+      <a href="#">MBO</a>
+      <a href="#">VMBO</a>
+      <a href="#">CONTACT</a>
+    </div>
+  </div>
 
   <h1>Software Developer</h1>
   <p>Home Open dag Software Developer</p>
