@@ -176,6 +176,26 @@
       text-align: center;
       padding: 20px;
     }
+
+    @media (min-width: 700px) {
+      .navbar {
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+      }
+
+      .left {
+        margin-bottom: 0;
+      }
+
+      .logo {
+        font-size: 26px;
+      }
+
+      .nav-links a {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
