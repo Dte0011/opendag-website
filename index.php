@@ -198,6 +198,35 @@
       .nav-links a {
         font-size: 16px;
       }
+
+      .hero {
+        padding: 40px 30px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero .info {
+        flex-direction: row;
+        gap: 40px;
+      }
+
+      .knoppen {
+        flex-direction: row;
+      }
+
+      .knop {
+        padding: 12px 20px;
+      }
+
+      .intro {
+        padding: 40px 30px;
+      }
+
+      .intro h2 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
