@@ -95,6 +95,28 @@
     .intro h2 {
       font-size: 24px;
     }
+
+    .vakken {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3px;
+    }
+
+    .vak {
+      padding: 22px;
+      color: white;
+      font-weight: bold;
+      min-height: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .geel { background-color: #f9c800; color: #0b3d2e; }
+    .paars { background-color: #7b3fe4; }
+    .oranje { background-color: #f5a623; }
+    .roze { background-color: #f3a6c9; color: #0b3d2e; }
+    .blauw { background-color: #1b2a6b; }
   </style>
 </head>
 <body>
@@ -129,11 +151,34 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam ducimus consectetur optio dolore, dolorum sint magni minima temporibus sit voluptates officiis unde ex accusantium odio natus nam ea maiores!</p>
   </div>
 
-  <h2>Sfeer op de afdeling</h2>
-  <h2>Wat vind ik van de opleiding</h2>
-  <h2>Rooster eerstejaars</h2>
-  <h2>Groepswerk</h2>
-  <h2>Huiswerk</h2>
+  <div class="vakken" id="vakken">
+
+    <div class="vak geel">
+      <span>Sfeer op de afdeling</span>
+      <span>↗</span>
+    </div>
+
+    <div class="vak paars">
+      <span>Wat vind ik van de opleiding</span>
+      <span>↗</span>
+    </div>
+
+    <div class="vak oranje">
+      <span>Rooster eerstejaars</span>
+      <span>↗</span>
+    </div>
+
+    <div class="vak roze">
+      <span>Groepswerk</span>
+      <span>↗</span>
+    </div>
+
+    <div class="vak blauw">
+      <span>Huiswerk</span>
+      <span>↗</span>
+    </div>
+
+  </div>
 
   <p>Meer weten over de opleiding? Bezoek curio.nl</p>
   <p>Kom naar de open dag. Bekijk data</p>
