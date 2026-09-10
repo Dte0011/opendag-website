@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Software Developer</title>
   <style>
+    /* ==========================================================
+       Base
+       ========================================================== */
     body {
       margin: 0;
       font-family: Arial;
       color: #0b3d2e;
     }
 
+    /* ==========================================================
+       Navbar
+       ========================================================== */
     .navbar {
       background-color: #0b3d2e;
       color: #f9c800;
@@ -43,6 +49,9 @@
       white-space: nowrap;
     }
 
+    /* ==========================================================
+       Hero
+       ========================================================== */
     .hero {
       background-color: #0b3d2e;
       color: #f9c800;
@@ -73,6 +82,7 @@
       font-weight: bold;
     }
 
+    /* Buttons (used in hero) */
     .knoppen {
       display: flex;
       flex-direction: column;
@@ -88,6 +98,9 @@
       text-align: center;
     }
 
+    /* ==========================================================
+       Intro
+       ========================================================== */
     .intro {
       padding: 30px 20px;
     }
@@ -96,6 +109,9 @@
       font-size: 24px;
     }
 
+    /* ==========================================================
+       Vakken (subjects grid)
+       ========================================================== */
     .vakken {
       display: grid;
       grid-template-columns: 1fr;
@@ -112,15 +128,59 @@
       justify-content: space-between;
     }
 
+    /* Color variants per vak-tegel */
     .geel { background-color: #f9c800; color: #0b3d2e; }
     .paars { background-color: #7b3fe4; }
     .oranje { background-color: #f5a623; }
     .roze { background-color: #f3a6c9; color: #0b3d2e; }
     .blauw { background-color: #1b2a6b; }
+
+    /* ==========================================================
+       CTA (call to action)
+       ========================================================== */
+    .cta {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3px;
+      margin-top: 3px;
+    }
+
+    .cta div {
+      padding: 25px;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .cta-groen {
+      background-color: #0b3d2e;
+      color: #f9c800;
+    }
+
+    .cta-geel {
+      background-color: #f9c800;
+      color: #0b3d2e;
+    }
+
+    .cta div p {
+      font-size: 13px;
+      font-weight: normal;
+      margin-top: 10px;
+    }
+
+    /* ==========================================================
+       Footer
+       ========================================================== */
+    footer {
+      background-color: #0b3d2e;
+      color: #f9c800;
+      text-align: center;
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Navbar -->
   <div class="navbar">
     <div class="left">
       <div class="logo">curio</div>
@@ -132,6 +192,7 @@
     </div>
   </div>
 
+  <!-- Hero -->
   <div class="hero">
     <p class="breadcrumb">Home Open dag Software Developer</p>
     <h1>Software Developer</h1>
@@ -146,11 +207,13 @@
     </div>
   </div>
 
+  <!-- Intro -->
   <div class="intro">
     <h2>In het kort</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam ducimus consectetur optio dolore, dolorum sint magni minima temporibus sit voluptates officiis unde ex accusantium odio natus nam ea maiores!</p>
   </div>
 
+  <!-- Vakken (subjects) -->
   <div class="vakken" id="vakken">
 
     <div class="vak geel">
@@ -180,9 +243,19 @@
 
   </div>
 
-  <p>Meer weten over de opleiding? Bezoek curio.nl</p>
-  <p>Kom naar de open dag. Bekijk data</p>
+  <!-- CTA -->
+  <div class="cta">
+    <div class="cta-groen">
+      Meer weten over de opleiding? ↗
+      <p>Bezoek https://www.curio.nl/mbo/ict/ict/software-developer</p>
+    </div>
+    <div class="cta-geel">
+      Kom naar de open dag ↗
+      <p>Bekijk data</p>
+    </div>
+  </div>
 
+  <!-- Footer -->
   <footer>
     <?php echo date("Y"); ?> Curio Software Developer
   </footer>
