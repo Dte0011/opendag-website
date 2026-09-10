@@ -142,7 +142,7 @@
     </div>
     <div class="knoppen">
       <a class="knop" href="#vakken">Mijn ervaring ↗</a>
-      <a class="knop" href="https://www.curio.nl/mbo/studiekeuze/open-dagen?gad_source=1&gad_campaignid=6478295456&gbraid=0AAAAADMF4NyieFRWtFmMNskh-XkyTCcnZ&gclid=CjwKCAjwqonVBhA4EiwA9wYJ3e5eZ4KPaTgZRI0BBxyAmwpqgvYF0K8GAQsLmD5RkUg-gcRAxa9olBoCvKYQAvD_BwE" target="_blank">Open dagen ↗</a>
+      <a class="knop" href="https://curio.nl" target="_blank">Open dagen ↗</a>
     </div>
   </div>
 
