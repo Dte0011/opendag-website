@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Software Developer</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     /* ==========================================================
        Base
        ========================================================== */
@@ -12,6 +16,7 @@
       margin: 0;
       font-family: Arial;
       color: #0b3d2e;
+      overflow-x: hidden;
     }
 
     /* ==========================================================
@@ -185,6 +190,7 @@
         padding: 20px 30px;
         display: flex;
         align-items: center;
+        gap: 40px;
       }
 
       .left {
@@ -226,6 +232,14 @@
 
       .intro h2 {
         font-size: 28px;
+      }
+
+      .vakken {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .cta {
+        grid-template-columns: 1fr 1fr;
       }
     }
   </style>
