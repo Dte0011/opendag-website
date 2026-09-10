@@ -87,6 +87,14 @@
       text-decoration: none;
       text-align: center;
     }
+
+    .intro {
+      padding: 30px 20px;
+    }
+
+    .intro h2 {
+      font-size: 24px;
+    }
   </style>
 </head>
 <body>
@@ -116,8 +124,10 @@
     </div>
   </div>
 
-  <h2>In het kort</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam ducimus consectetur optio dolore, dolorum sint magni minima temporibus sit voluptates officiis unde ex accusantium odio natus nam ea maiores!</p>
+  <div class="intro">
+    <h2>In het kort</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam ducimus consectetur optio dolore, dolorum sint magni minima temporibus sit voluptates officiis unde ex accusantium odio natus nam ea maiores!</p>
+  </div>
 
   <h2>Sfeer op de afdeling</h2>
   <h2>Wat vind ik van de opleiding</h2>
