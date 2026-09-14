@@ -126,11 +126,21 @@
     .vak {
       padding: 22px;
       color: white;
-      font-weight: bold;
       min-height: 110px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 10px;
+    }
+
+    .vak-titel {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .vak-tekst {
+      font-weight: normal;
+      font-size: 13px;
     }
 
     /* Color variants per vak-tegel */
@@ -150,10 +160,13 @@
       margin-top: 3px;
     }
 
-    .cta div {
+    .cta a {
+      display: block;
       padding: 25px;
       font-weight: bold;
       font-size: 17px;
+      text-decoration: none;
+      text-align: center;
     }
 
     .cta-groen {
@@ -166,7 +179,7 @@
       color: #0b3d2e;
     }
 
-    .cta div p {
+    .cta a p {
       font-size: 13px;
       font-weight: normal;
       margin-top: 10px;
@@ -178,8 +191,49 @@
     footer {
       background-color: #0b3d2e;
       color: #f9c800;
+      border-top: 2px solid #f9c800;
+      padding: 10px 20px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
       text-align: center;
-      padding: 20px;
+    }
+
+    .footer-logo {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: #f9c800;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 11px;
+    }
+
+    .footer-divider {
+      width: 100%;
+      max-width: 120px;
+      height: 1px;
+      background-color: rgba(249, 200, 0, 0.4);
+    }
+
+    .footer-copy {
+      margin: 0;
+      font-size: 11px;
     }
 
     /* ==========================================================
@@ -239,7 +293,7 @@
       }
 
       .cta {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -252,9 +306,9 @@
       <div class="logo">curio</div>
     </div>
     <div class="nav-links">
-      <a href="#">MBO</a>
-      <a href="#">VMBO</a>
-      <a href="#">CONTACT</a>
+      <a href="https://www.curio.nl/mbo" target="_blank">MBO</a>
+      <a href="https://www.curio.nl/vmbo" target="_blank">VMBO</a>
+      <a href="https://www.curio.nl/hulp-nodig/service-en-contact" target="_blank">CONTACT</a>
     </div>
   </div>
 
@@ -263,13 +317,13 @@
     <p class="breadcrumb">Home Open dag Software Developer</p>
     <h1>Software Developer</h1>
     <div class="info">
-      <span>GEMAAKT DOOR<br>vul hier je naam in</span>
+      <span>GEMAAKT DOOR<br>Lorem Ipsum</span>
       <span>JAAR<br>1</span>
       <span>NIVEAU<br>4</span>
     </div>
     <div class="knoppen">
       <a class="knop" href="#vakken">Mijn ervaring ↗</a>
-      <a class="knop" href="https://www.curio.nl/mbo/studiekeuze/open-dagen?gad_source=1&gad_campaignid=6478295456&gbraid=0AAAAADMF4NyieFRWtFmMNskh-XkyTCcnZ&gclid=CjwKCAjwqonVBhA4EiwA9wYJ3e5eZ4KPaTgZRI0BBxyAmwpqgvYF0K8GAQsLmD5RkUg-gcRAxa9olBoCvKYQAvD_BwE" target="_blank">Open dagen ↗</a>
+      <a class="knop" href="https://www.curio.nl/mbo/studiekeuze/open-dagen" target="_blank">Open dagen ↗</a>
     </div>
   </div>
 
@@ -283,47 +337,52 @@
   <div class="vakken" id="vakken">
 
     <div class="vak geel">
-      <span>Sfeer op de afdeling</span>
-      <span>↗</span>
+      <span class="vak-titel">Sfeer op de afdeling</span>
+      <span class="vak-tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
     </div>
 
     <div class="vak paars">
-      <span>Wat vind ik van de opleiding</span>
-      <span>↗</span>
+      <span class="vak-titel">Wat vind ik van de opleiding</span>
+      <span class="vak-tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
     </div>
 
     <div class="vak oranje">
-      <span>Rooster eerstejaars</span>
-      <span>↗</span>
+      <span class="vak-titel">Rooster eerstejaars</span>
+      <span class="vak-tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
     </div>
 
     <div class="vak roze">
-      <span>Groepswerk</span>
-      <span>↗</span>
+      <span class="vak-titel">Groepswerk</span>
+      <span class="vak-tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
     </div>
 
     <div class="vak blauw">
-      <span>Huiswerk</span>
-      <span>↗</span>
+      <span class="vak-titel">Huiswerk</span>
+      <span class="vak-tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
     </div>
 
   </div>
 
   <!-- CTA -->
   <div class="cta">
-    <div class="cta-groen">
+    <a class="cta-geel" href="https://www.curio.nl/mbo/ict/ict/software-developer" target="_blank">
       Meer weten over de opleiding? ↗
-      <p>Bezoek https://www.curio.nl/mbo/ict/ict/software-developer</p>
-    </div>
-    <div class="cta-geel">
-      Kom naar de open dag ↗
-      <p>Bekijk data</p>
-    </div>
+      <p>Bezoek curio.nl/mbo/ict/ict/software-developer</p>
+    </a>
   </div>
 
   <!-- Footer -->
   <footer>
-    <?php echo date("Y"); ?> Curio Software Developer
+    <div class="footer-inner">
+      <div class="footer-logo">curio</div>
+      <div class="footer-links">
+        <a href="https://www.curio.nl/mbo" target="_blank">MBO</a>
+        <a href="https://www.curio.nl/vmbo" target="_blank">VMBO</a>
+        <a href="https://www.curio.nl/hulp-nodig/service-en-contact" target="_blank">CONTACT</a>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">&copy; <?php echo date("Y"); ?> Curio Software Developer</p>
+    </div>
   </footer>
 
 </body>
