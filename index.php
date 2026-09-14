@@ -126,10 +126,10 @@
     .vak {
       padding: 22px;
       color: white;
-      min-height: 110px;
+      min-height: 240px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 10px;
     }
 
@@ -140,7 +140,8 @@
 
     .vak-tekst {
       font-weight: normal;
-      font-size: 13px;
+      font-size: 15px;
+      line-height: 1.4;
     }
 
     /* Color variants per vak-tegel */
@@ -317,8 +318,8 @@
     <p class="breadcrumb">Home Open dag Software Developer</p>
     <h1>Software Developer</h1>
     <div class="info">
-      <span>GEMAAKT DOOR<br>Lorem Ipsum</span>
-      <span>JAAR<br>1</span>
+      <span>GEMAAKT DOOR<br>Timo van Eck</span>
+      <span>JAAR<br>2</span>
       <span>NIVEAU<br>4</span>
     </div>
     <div class="knoppen">
@@ -330,7 +331,7 @@
   <!-- Intro -->
   <div class="intro">
     <h2>In het kort</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam ducimus consectetur optio dolore, dolorum sint magni minima temporibus sit voluptates officiis unde ex accusantium odio natus nam ea maiores!</p>
+    <p>Bij Software Developer leer je apps en websites maken. Je leert programmeren en werkt samen aan echte projecten, net zoals bij een echt bedrijf. Je leert verschillende programmeertalen kennen en hoe je een probleem stap voor stap oplost met code. Ook leer je samenwerken in een team, want software maken doe je bijna nooit alleen. Naast programmeren komt ook design en gebruiksvriendelijkheid aan bod: hoe zorg je dat een app of website fijn is om te gebruiken? Na de opleiding kun je aan de slag als software developer, of je kiest voor een vervolgstudie.</p>
   </div>
 
   <!-- Vakken (subjects) -->
@@ -338,27 +339,27 @@
 
     <div class="vak geel">
       <span class="vak-titel">Sfeer op de afdeling</span>
-      <span class="vak-tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+      <span class="vak-tekst">Iedereen doet hier best wel zijn eigen ding en heeft veel eigen verantwoordelijkheid. Er wordt genoeg gekletst en gezellig gedaan, en de sfeer is ontspannen, maar op een gegeven moment moet je toch echt aan het werk en je projecten afmaken. Die balans tussen vrijheid en verantwoordelijkheid vind ik wel prettig.</span>
     </div>
 
     <div class="vak paars">
       <span class="vak-titel">Wat vind ik van de opleiding</span>
-      <span class="vak-tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+      <span class="vak-tekst">Ik vind het soms best pittig, maar wel leuk en interessant. Je begint met bijna niks en kunt uiteindelijk zelf alles bouwen, en je leert steeds beter hoe een computer dingen precies verwerkt. Vooral het moment waarop iets wat je zelf gemaakt hebt, echt werkt, geeft een goed gevoel.</span>
     </div>
 
     <div class="vak oranje">
       <span class="vak-titel">Rooster eerstejaars</span>
-      <span class="vak-tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+      <span class="vak-tekst">Zelf had ik 4 dagen school per week, en woensdag was bijna altijd vrij. Het rooster lag binnen een blok steeds vast, maar veranderde per blok, en in jaar 1 had je 2 blokken. Meestal was het gewoon van 09:00 tot 15:00 les. Niet altijd makkelijk, maar zeker ook geen zwaar rooster.</span>
     </div>
 
     <div class="vak roze">
       <span class="vak-titel">Groepswerk</span>
-      <span class="vak-tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+      <span class="vak-tekst">Groepswerk speelt een grote rol, vooral in de praktijk wordt heel veel samen gedaan. Zo gaat het later op de werkvloer ook: het is belangrijk dat je met allerlei verschillende mensen kunt samenwerken, ook als je dat zelf niet altijd zou willen. Je leert daardoor niet alleen programmeren, maar ook overleggen en plannen.</span>
     </div>
 
     <div class="vak blauw">
       <span class="vak-titel">Huiswerk</span>
-      <span class="vak-tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+      <span class="vak-tekst">Huiswerk ligt volledig aan jezelf: hoe meer je in de les af maakt, hoe minder huiswerk je hebt. Het is in mijn ervaring niet heel veel, meestal 1 tot 3 uur per dag, heel soms 4. Hoeveel tijd het kost, hangt dus ook af van hoeveel je er zelf voor kiest te doen. Samenwerkopdrachten doe je via GitHub, en communiceren met je groepje gaat via Teams.</span>
     </div>
 
   </div>
