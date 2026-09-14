@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Software Developer</title>
   <style>
+    /* ==========================================================
+       Variabelen (Curio huisstijlkleuren)
+       ========================================================== */
+    :root {
+      --groen: #0b3d2e;
+      --geel: #f9c800;
+      --paars: #7b3fe4;
+      --oranje: #f5a623;
+      --roze: #f3a6c9;
+      --blauw: #1b2a6b;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -15,7 +27,7 @@
     body {
       margin: 0;
       font-family: Arial;
-      color: #0b3d2e;
+      color: var(--groen);
       overflow-x: hidden;
     }
 
@@ -23,8 +35,8 @@
        Navbar
        ========================================================== */
     .navbar {
-      background-color: #0b3d2e;
-      color: #f9c800;
+      background-color: var(--groen);
+      color: var(--geel);
       padding: 15px 20px;
     }
 
@@ -47,7 +59,7 @@
     }
 
     .nav-links a {
-      color: #f9c800;
+      color: var(--geel);
       text-decoration: none;
       font-weight: bold;
       font-size: 14px;
@@ -58,8 +70,8 @@
        Hero
        ========================================================== */
     .hero {
-      background-color: #0b3d2e;
-      color: #f9c800;
+      background-color: var(--groen);
+      color: var(--geel);
       padding: 30px 20px;
     }
 
@@ -87,7 +99,9 @@
       font-weight: bold;
     }
 
-    /* Buttons (used in hero) */
+    /* ==========================================================
+       Knoppen (gebruikt in de hero)
+       ========================================================== */
     .knoppen {
       display: flex;
       flex-direction: column;
@@ -95,8 +109,8 @@
     }
 
     .knop {
-      background-color: #f9c800;
-      color: #0b3d2e;
+      background-color: var(--geel);
+      color: var(--groen);
       padding: 14px 20px;
       font-weight: bold;
       text-decoration: none;
@@ -144,12 +158,12 @@
       line-height: 1.4;
     }
 
-    /* Color variants per vak-tegel */
-    .geel { background-color: #f9c800; color: #0b3d2e; }
-    .paars { background-color: #7b3fe4; }
-    .oranje { background-color: #f5a623; }
-    .roze { background-color: #f3a6c9; color: #0b3d2e; }
-    .blauw { background-color: #1b2a6b; }
+    /* Kleurvarianten per vak-tegel */
+    .geel { background-color: var(--geel); color: var(--groen); }
+    .paars { background-color: var(--paars); }
+    .oranje { background-color: var(--oranje); }
+    .roze { background-color: var(--roze); color: var(--groen); }
+    .blauw { background-color: var(--blauw); }
 
     /* ==========================================================
        CTA (call to action)
@@ -170,14 +184,9 @@
       text-align: center;
     }
 
-    .cta-groen {
-      background-color: #0b3d2e;
-      color: #f9c800;
-    }
-
     .cta-geel {
-      background-color: #f9c800;
-      color: #0b3d2e;
+      background-color: var(--geel);
+      color: var(--groen);
     }
 
     .cta a p {
@@ -190,9 +199,9 @@
        Footer
        ========================================================== */
     footer {
-      background-color: #0b3d2e;
-      color: #f9c800;
-      border-top: 2px solid #f9c800;
+      background-color: var(--groen);
+      color: var(--geel);
+      border-top: 2px solid var(--geel);
       padding: 10px 20px;
     }
 
@@ -219,7 +228,7 @@
     }
 
     .footer-links a {
-      color: #f9c800;
+      color: var(--geel);
       text-decoration: none;
       font-weight: bold;
       font-size: 11px;
