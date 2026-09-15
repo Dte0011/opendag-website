@@ -15,6 +15,7 @@
       --oranje: #f5a623;
       --roze: #f3a6c9;
       --blauw: #1b2a6b;
+      --rand: max(20px, calc((100% - 960px) / 2));
     }
 
     * {
@@ -37,7 +38,7 @@
     .navbar {
       background-color: var(--groen);
       color: var(--geel);
-      padding: 15px 20px;
+      padding: 15px var(--rand);
     }
 
     .left {
@@ -48,8 +49,8 @@
     }
 
     .logo {
-      font-size: 22px;
-      font-weight: bold;
+      display: block;
+      height: 30px;
     }
 
     .nav-links {
@@ -66,13 +67,17 @@
       white-space: nowrap;
     }
 
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
     /* ==========================================================
        Hero
        ========================================================== */
     .hero {
       background-color: var(--groen);
       color: var(--geel);
-      padding: 30px 20px;
+      padding: 30px var(--rand);
     }
 
     .hero .breadcrumb {
@@ -117,15 +122,50 @@
       text-align: center;
     }
 
+    .knop:hover,
+    .cta a:hover {
+      filter: brightness(1.1);
+    }
+
+    .intro,
+    .vakken,
+    .rooster-vak,
+    .cta {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
     /* ==========================================================
        Intro
        ========================================================== */
     .intro {
-      padding: 30px 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
 
     .intro h2 {
       font-size: 24px;
+    }
+
+    .intro p {
+      line-height: 1.6;
+    }
+
+    .fotos {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3px;
+      margin-top: 20px;
+    }
+
+    .fotos img {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      display: block;
     }
 
     /* ==========================================================
@@ -166,13 +206,38 @@
     .blauw { background-color: var(--blauw); }
 
     /* ==========================================================
+       Rooster sectie
+       ========================================================== */
+    .rooster-vak {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .rooster-vak h3 {
+      font-size: 20px;
+      margin: 0 0 10px 0;
+    }
+
+    .rooster-scroll {
+      overflow-x: auto;
+      background-color: var(--groen);
+      padding: 8px;
+    }
+
+    .rooster-img {
+      width: 100%;
+      min-width: 700px;
+      height: auto;
+      display: block;
+    }
+
+    /* ==========================================================
        CTA (call to action)
        ========================================================== */
     .cta {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 3px;
-      margin-top: 3px;
+      margin-bottom: 30px;
     }
 
     .cta a {
@@ -216,8 +281,8 @@
     }
 
     .footer-logo {
-      font-size: 14px;
-      font-weight: bold;
+      display: block;
+      height: 20px;
     }
 
     .footer-links {
@@ -251,7 +316,8 @@
        ========================================================== */
     @media (min-width: 700px) {
       .navbar {
-        padding: 20px 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         display: flex;
         align-items: center;
         gap: 40px;
@@ -262,7 +328,7 @@
       }
 
       .logo {
-        font-size: 26px;
+        height: 36px;
       }
 
       .nav-links a {
@@ -270,7 +336,8 @@
       }
 
       .hero {
-        padding: 40px 30px;
+        padding-top: 40px;
+        padding-bottom: 40px;
       }
 
       .hero h1 {
@@ -291,19 +358,29 @@
       }
 
       .intro {
-        padding: 40px 30px;
+        padding-top: 40px;
+        padding-bottom: 40px;
       }
 
       .intro h2 {
         font-size: 28px;
       }
 
-      .vakken {
-        grid-template-columns: repeat(3, 1fr);
+      .fotos {
+        grid-template-columns: 1fr 1fr;
       }
 
-      .cta {
-        grid-template-columns: 1fr;
+      .vakken {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .vak {
+        grid-column: span 2;
+      }
+
+      .vak:nth-child(n+4) {
+        grid-column: span 3;
+        min-height: 0;
       }
     }
   </style>
@@ -313,7 +390,7 @@
   <!-- Navbar -->
   <div class="navbar">
     <div class="left">
-      <div class="logo">curio</div>
+      <img class="logo" src="assets/img/logo/curio-logo-geel.png" alt="curio">
     </div>
     <div class="nav-links">
       <a href="https://www.curio.nl/mbo" target="_blank">MBO</a>
@@ -341,6 +418,10 @@
   <div class="intro">
     <h2>In het kort</h2>
     <p>Bij Software Developer leer je apps en websites maken. Je leert programmeren en werkt samen aan echte projecten, net zoals bij een echt bedrijf. Je leert verschillende programmeertalen kennen en hoe je een probleem stap voor stap oplost met code. Ook leer je samenwerken in een team, want software maken doe je bijna nooit alleen. Naast programmeren komt ook design en gebruiksvriendelijkheid aan bod: hoe zorg je dat een app of website fijn is om te gebruiken? Na de opleiding kun je aan de slag als software developer, of je kiest voor een vervolgstudie.</p>
+    <div class="fotos">
+      <img src="assets/img/opleiding/software-development-in-actie.jpg" alt="Student aan het programmeren op laptop en scherm">
+      <img src="assets/img/locatie/curio-terheijdenseweg-buiten.jpg" alt="Curio locatie Terheijdenseweg 350 in Breda">
+    </div>
   </div>
 
   <!-- Vakken (subjects) -->
@@ -358,7 +439,7 @@
 
     <div class="vak oranje">
       <span class="vak-titel">Rooster eerstejaars</span>
-      <span class="vak-tekst">Zelf had ik 4 dagen school per week, en woensdag was bijna altijd vrij. Het rooster lag binnen een blok steeds vast, maar veranderde per blok, en in jaar 1 had je 2 blokken. Meestal was het gewoon van 09:00 tot 15:00 les. Niet altijd makkelijk, maar zeker ook geen zwaar rooster.</span>
+      <span class="vak-tekst">Hieronder zie je een week uit het rooster van leerjaar 1 op de Terheijdenseweg 350 (THW350). Op maandag, dinsdag en donderdag heb je vooral Fundament 1: WEB, met daarnaast Rekenen, Nederlands en Burgerschap. Woensdag en vrijdag staan in het teken van Challenges en Masterclasses. De lessen vallen tussen 08:30 en 16:30.</span>
     </div>
 
     <div class="vak roze">
@@ -373,6 +454,14 @@
 
   </div>
 
+  <!-- Rooster afbeelding -->
+  <div class="rooster-vak">
+    <h3>Voorbeeld rooster eerste leerjaar</h3>
+    <div class="rooster-scroll">
+      <img src="assets/img/opleiding/rooster-eerste-leerjaar.png" alt="Rooster eerste leerjaar Software Developer" class="rooster-img">
+    </div>
+  </div>
+
   <!-- CTA -->
   <div class="cta">
     <a class="cta-geel" href="https://www.curio.nl/mbo/ict/ict/software-developer" target="_blank">
@@ -384,7 +473,7 @@
   <!-- Footer -->
   <footer>
     <div class="footer-inner">
-      <div class="footer-logo">curio</div>
+      <img class="footer-logo" src="assets/img/logo/curio-logo-geel.png" alt="curio">
       <div class="footer-links">
         <a href="https://www.curio.nl/mbo" target="_blank">MBO</a>
         <a href="https://www.curio.nl/vmbo" target="_blank">VMBO</a>
