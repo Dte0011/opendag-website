@@ -260,6 +260,56 @@
       margin-top: 10px;
     }
 
+    .fotos img,
+    .rooster-img {
+      cursor: zoom-in;
+    }
+
+    .lightbox {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0;
+      padding: 20px;
+      border: 0;
+      background: transparent;
+      overflow: auto;
+    }
+
+    .lightbox[open] {
+      display: flex;
+    }
+
+    .lightbox::backdrop {
+      background-color: rgba(11, 61, 46, 0.92);
+    }
+
+    .lightbox img {
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .lightbox-sluit {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      background-color: var(--geel);
+      color: var(--groen);
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    body:has(.lightbox[open]) {
+      overflow: hidden;
+    }
+
     /* ==========================================================
        Footer
        ========================================================== */
@@ -309,6 +359,14 @@
     .footer-copy {
       margin: 0;
       font-size: 11px;
+    }
+
+    @media (max-width: 699px) {
+      .lightbox.breed img {
+        width: 1000px;
+        max-width: none;
+        max-height: none;
+      }
     }
 
     /* ==========================================================
@@ -483,6 +541,29 @@
       <p class="footer-copy">&copy; <?php echo date("Y"); ?> Curio Software Developer</p>
     </div>
   </footer>
+
+  <dialog class="lightbox" id="lightbox">
+    <button class="lightbox-sluit" aria-label="Sluiten">✕</button>
+    <img src="" alt="">
+  </dialog>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const grootImg = lightbox.querySelector('img');
+
+    document.querySelectorAll('.fotos img, .rooster-img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        grootImg.src = img.src;
+        grootImg.alt = img.alt;
+        lightbox.classList.toggle('breed', img.classList.contains('rooster-img'));
+        lightbox.showModal();
+      });
+    });
+
+    lightbox.addEventListener('click', function () {
+      lightbox.close();
+    });
+  </script>
 
 </body>
 </html>
