@@ -1,2 +1,10 @@
+# Geheimen / lokale config
 .env
+
+# Originele bronbestanden (groot, alleen lokaal nodig)
 CurioAssets/
+
+# Systeembestanden
+Thumbs.db
+desktop.ini
+.DS_Store

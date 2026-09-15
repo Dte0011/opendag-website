@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Software Developer</title>
+  <meta name="description" content="Open dag informatie over de mbo-opleiding Software Developer bij Curio in Breda.">
+  <title>Software Developer | Curio open dag</title>
   <style>
     /* ==========================================================
-       Variabelen (Curio huisstijlkleuren)
+       1. Variabelen (Curio huisstijlkleuren)
        ========================================================== */
     :root {
       --groen: #0b3d2e;
@@ -15,25 +16,51 @@
       --oranje: #f5a623;
       --roze: #f3a6c9;
       --blauw: #1b2a6b;
+
+      /* Zijmarge voor volle-breedte balken: minimaal 20px,
+         op brede schermen staat de inhoud (960px) in het midden */
       --rand: max(20px, calc((100% - 960px) / 2));
     }
 
+    /* ==========================================================
+       2. Basis
+       ========================================================== */
     * {
       box-sizing: border-box;
     }
 
-    /* ==========================================================
-       Base
-       ========================================================== */
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial;
+      font-family: Arial, Helvetica, sans-serif;
       color: var(--groen);
       overflow-x: hidden;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
     /* ==========================================================
-       Navbar
+       3. Layout: blokken met max breedte in het midden
+       ========================================================== */
+    .intro,
+    .vakken,
+    .rooster-vak,
+    .cta {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* ==========================================================
+       4. Navbar
        ========================================================== */
     .navbar {
       background-color: var(--groen);
@@ -41,15 +68,14 @@
       padding: 15px var(--rand);
     }
 
-    .left {
-      display: flex;
-      align-items: center;
-      gap: 15px;
+    .logo-link {
+      display: block;
+      width: fit-content;
       margin-bottom: 10px;
     }
 
     .logo {
-      display: block;
+      width: auto;
       height: 30px;
     }
 
@@ -72,7 +98,7 @@
     }
 
     /* ==========================================================
-       Hero
+       5. Hero
        ========================================================== */
     .hero {
       background-color: var(--groen);
@@ -83,7 +109,7 @@
     .hero .breadcrumb {
       font-weight: bold;
       font-size: 13px;
-      margin-bottom: 10px;
+      margin: 0 0 10px 0;
     }
 
     .hero h1 {
@@ -99,13 +125,12 @@
     }
 
     .hero .info span {
-      display: block;
       font-size: 13px;
       font-weight: bold;
     }
 
     /* ==========================================================
-       Knoppen (gebruikt in de hero)
+       6. Knoppen (hero)
        ========================================================== */
     .knoppen {
       display: flex;
@@ -122,24 +147,12 @@
       text-align: center;
     }
 
-    .knop:hover,
-    .cta a:hover {
+    .knop:hover {
       filter: brightness(1.1);
     }
 
-    .intro,
-    .vakken,
-    .rooster-vak,
-    .cta {
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
     /* ==========================================================
-       Intro
+       7. Intro + foto's
        ========================================================== */
     .intro {
       padding-top: 30px;
@@ -163,13 +176,13 @@
 
     .fotos img {
       width: 100%;
+      height: auto;
       aspect-ratio: 3 / 2;
       object-fit: cover;
-      display: block;
     }
 
     /* ==========================================================
-       Vakken (subjects grid)
+       8. Vakken (tegels met tekst)
        ========================================================== */
     .vakken {
       display: grid;
@@ -178,46 +191,46 @@
     }
 
     .vak {
-      padding: 22px;
-      color: white;
-      min-height: 240px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
       gap: 10px;
+      min-height: 240px;
+      padding: 22px;
+      color: white;
     }
 
     .vak-titel {
-      font-weight: bold;
+      margin: 0;
       font-size: 16px;
     }
 
     .vak-tekst {
-      font-weight: normal;
+      margin: 0;
       font-size: 15px;
       line-height: 1.4;
     }
 
-    /* Kleurvarianten per vak-tegel */
-    .geel { background-color: var(--geel); color: var(--groen); }
-    .paars { background-color: var(--paars); }
+    /* Kleurvarianten per tegel */
+    .geel   { background-color: var(--geel); color: var(--groen); }
+    .paars  { background-color: var(--paars); }
     .oranje { background-color: var(--oranje); }
-    .roze { background-color: var(--roze); color: var(--groen); }
-    .blauw { background-color: var(--blauw); }
+    .roze   { background-color: var(--roze); color: var(--groen); }
+    .blauw  { background-color: var(--blauw); }
 
     /* ==========================================================
-       Rooster sectie
+       9. Rooster
        ========================================================== */
     .rooster-vak {
       margin-top: 30px;
       margin-bottom: 30px;
     }
 
-    .rooster-vak h3 {
+    .rooster-vak h2 {
       font-size: 20px;
       margin: 0 0 10px 0;
     }
 
+    /* Op kleine schermen scrollt het rooster opzij, zodat het leesbaar blijft */
     .rooster-scroll {
       overflow-x: auto;
       background-color: var(--groen);
@@ -227,41 +240,98 @@
     .rooster-img {
       width: 100%;
       min-width: 700px;
+      max-width: none;
       height: auto;
-      display: block;
     }
 
     /* ==========================================================
-       CTA (call to action)
+       10. CTA (call to action)
        ========================================================== */
     .cta {
-      display: grid;
-      grid-template-columns: 1fr;
       margin-bottom: 30px;
     }
 
     .cta a {
       display: block;
       padding: 25px;
+      background-color: var(--geel);
+      color: var(--groen);
       font-weight: bold;
       font-size: 17px;
       text-decoration: none;
       text-align: center;
     }
 
-    .cta-geel {
-      background-color: var(--geel);
-      color: var(--groen);
+    .cta a:hover {
+      filter: brightness(1.1);
     }
 
-    .cta a p {
+    .cta a span {
+      display: block;
+      margin-top: 10px;
       font-size: 13px;
       font-weight: normal;
-      margin-top: 10px;
     }
 
-    .fotos img,
-    .rooster-img {
+    /* ==========================================================
+       11. Footer
+       ========================================================== */
+    footer {
+      background-color: var(--groen);
+      color: var(--geel);
+      border-top: 2px solid var(--geel);
+      padding: 10px 20px;
+    }
+
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      width: auto;
+      height: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: var(--geel);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 11px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-divider {
+      width: 100%;
+      max-width: 120px;
+      height: 1px;
+      background-color: rgba(249, 200, 0, 0.4);
+    }
+
+    .footer-copy {
+      margin: 0;
+      font-size: 11px;
+    }
+
+    /* ==========================================================
+       12. Lightbox (klik op afbeelding = vergroten)
+       ========================================================== */
+    .zoombaar {
       cursor: zoom-in;
     }
 
@@ -285,10 +355,9 @@
       background-color: rgba(11, 61, 46, 0.92);
     }
 
+    /* margin: auto centreert, maar laat scrollen toe als de afbeelding groter is */
     .lightbox img {
-      display: block;
       margin: auto;
-      max-width: 100%;
       max-height: 100%;
     }
 
@@ -306,62 +375,16 @@
       cursor: pointer;
     }
 
+    /* Pagina erachter niet laten scrollen zolang de lightbox open is */
     body:has(.lightbox[open]) {
       overflow: hidden;
     }
 
     /* ==========================================================
-       Footer
+       13. Responsive: mobiel (kleiner dan 700px)
        ========================================================== */
-    footer {
-      background-color: var(--groen);
-      color: var(--geel);
-      border-top: 2px solid var(--geel);
-      padding: 10px 20px;
-    }
-
-    .footer-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      text-align: center;
-    }
-
-    .footer-logo {
-      display: block;
-      height: 20px;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    .footer-links a {
-      color: var(--geel);
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 11px;
-    }
-
-    .footer-divider {
-      width: 100%;
-      max-width: 120px;
-      height: 1px;
-      background-color: rgba(249, 200, 0, 0.4);
-    }
-
-    .footer-copy {
-      margin: 0;
-      font-size: 11px;
-    }
-
     @media (max-width: 699px) {
+      /* Het brede rooster groot tonen; opzij scrollen om alles te zien */
       .lightbox.breed img {
         width: 1000px;
         max-width: none;
@@ -370,18 +393,18 @@
     }
 
     /* ==========================================================
-       Responsive (tablet/desktop)
+       14. Responsive: tablet en desktop (700px en breder)
        ========================================================== */
     @media (min-width: 700px) {
       .navbar {
-        padding-top: 20px;
-        padding-bottom: 20px;
         display: flex;
         align-items: center;
         gap: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
       }
 
-      .left {
+      .logo-link {
         margin-bottom: 0;
       }
 
@@ -428,6 +451,7 @@
         grid-template-columns: 1fr 1fr;
       }
 
+      /* 6 kolommen: 3 tegels bovenaan, 2 bredere tegels eronder */
       .vakken {
         grid-template-columns: repeat(6, 1fr);
       }
@@ -445,118 +469,153 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="left">
-      <img class="logo" src="assets/img/logo/curio-logo-geel.png" alt="curio">
-    </div>
-    <div class="nav-links">
-      <a href="https://www.curio.nl/mbo" target="_blank">MBO</a>
-      <a href="https://www.curio.nl/vmbo" target="_blank">VMBO</a>
-      <a href="https://www.curio.nl/hulp-nodig/service-en-contact" target="_blank">CONTACT</a>
-    </div>
-  </div>
-
-  <!-- Hero -->
-  <div class="hero">
-    <p class="breadcrumb">Home Open dag Software Developer</p>
-    <h1>Software Developer</h1>
-    <div class="info">
-      <span>GEMAAKT DOOR<br>Timo van Eck</span>
-      <span>JAAR<br>2</span>
-      <span>NIVEAU<br>4</span>
-    </div>
-    <div class="knoppen">
-      <a class="knop" href="#vakken">Mijn ervaring ↗</a>
-      <a class="knop" href="https://www.curio.nl/mbo/studiekeuze/open-dagen" target="_blank">Open dagen ↗</a>
-    </div>
-  </div>
-
-  <!-- Intro -->
-  <div class="intro">
-    <h2>In het kort</h2>
-    <p>Bij Software Developer leer je apps en websites maken. Je leert programmeren en werkt samen aan echte projecten, net zoals bij een echt bedrijf. Je leert verschillende programmeertalen kennen en hoe je een probleem stap voor stap oplost met code. Ook leer je samenwerken in een team, want software maken doe je bijna nooit alleen. Naast programmeren komt ook design en gebruiksvriendelijkheid aan bod: hoe zorg je dat een app of website fijn is om te gebruiken? Na de opleiding kun je aan de slag als software developer, of je kiest voor een vervolgstudie.</p>
-    <div class="fotos">
-      <img src="assets/img/opleiding/software-development-in-actie.jpg" alt="Student aan het programmeren op laptop en scherm">
-      <img src="assets/img/locatie/curio-terheijdenseweg-buiten.jpg" alt="Curio locatie Terheijdenseweg 350 in Breda">
-    </div>
-  </div>
-
-  <!-- Vakken (subjects) -->
-  <div class="vakken" id="vakken">
-
-    <div class="vak geel">
-      <span class="vak-titel">Sfeer op de afdeling</span>
-      <span class="vak-tekst">Iedereen doet hier best wel zijn eigen ding en heeft veel eigen verantwoordelijkheid. Er wordt genoeg gekletst en gezellig gedaan, en de sfeer is ontspannen, maar op een gegeven moment moet je toch echt aan het werk en je projecten afmaken. Die balans tussen vrijheid en verantwoordelijkheid vind ik wel prettig.</span>
-    </div>
-
-    <div class="vak paars">
-      <span class="vak-titel">Wat vind ik van de opleiding</span>
-      <span class="vak-tekst">Ik vind het soms best pittig, maar wel leuk en interessant. Je begint met bijna niks en kunt uiteindelijk zelf alles bouwen, en je leert steeds beter hoe een computer dingen precies verwerkt. Vooral het moment waarop iets wat je zelf gemaakt hebt, echt werkt, geeft een goed gevoel.</span>
-    </div>
-
-    <div class="vak oranje">
-      <span class="vak-titel">Rooster eerstejaars</span>
-      <span class="vak-tekst">Hieronder zie je een week uit het rooster van leerjaar 1 op de Terheijdenseweg 350 (THW350). Op maandag, dinsdag en donderdag heb je vooral Fundament 1: WEB, met daarnaast Rekenen, Nederlands en Burgerschap. Woensdag en vrijdag staan in het teken van Challenges en Masterclasses. De lessen vallen tussen 08:30 en 16:30.</span>
-    </div>
-
-    <div class="vak roze">
-      <span class="vak-titel">Groepswerk</span>
-      <span class="vak-tekst">Groepswerk speelt een grote rol, vooral in de praktijk wordt heel veel samen gedaan. Zo gaat het later op de werkvloer ook: het is belangrijk dat je met allerlei verschillende mensen kunt samenwerken, ook als je dat zelf niet altijd zou willen. Je leert daardoor niet alleen programmeren, maar ook overleggen en plannen.</span>
-    </div>
-
-    <div class="vak blauw">
-      <span class="vak-titel">Huiswerk</span>
-      <span class="vak-tekst">Huiswerk ligt volledig aan jezelf: hoe meer je in de les af maakt, hoe minder huiswerk je hebt. Het is in mijn ervaring niet heel veel, meestal 1 tot 3 uur per dag, heel soms 4. Hoeveel tijd het kost, hangt dus ook af van hoeveel je er zelf voor kiest te doen. Samenwerkopdrachten doe je via GitHub, en communiceren met je groepje gaat via Teams.</span>
-    </div>
-
-  </div>
-
-  <!-- Rooster afbeelding -->
-  <div class="rooster-vak">
-    <h3>Voorbeeld rooster eerste leerjaar</h3>
-    <div class="rooster-scroll">
-      <img src="assets/img/opleiding/rooster-eerste-leerjaar.png" alt="Rooster eerste leerjaar Software Developer" class="rooster-img">
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <div class="cta">
-    <a class="cta-geel" href="https://www.curio.nl/mbo/ict/ict/software-developer" target="_blank">
-      Meer weten over de opleiding? ↗
-      <p>Bezoek curio.nl/mbo/ict/ict/software-developer</p>
+  <!-- ==========================================================
+       Navbar
+       ========================================================== -->
+  <header class="navbar">
+    <a class="logo-link" href="https://www.curio.nl" target="_blank" rel="noopener">
+      <img class="logo" src="assets/img/logo/curio-logo-geel.png" alt="Curio" width="400" height="140">
     </a>
-  </div>
+    <nav class="nav-links">
+      <a href="https://www.curio.nl/mbo" target="_blank" rel="noopener">MBO</a>
+      <a href="https://www.curio.nl/vmbo" target="_blank" rel="noopener">VMBO</a>
+      <a href="https://www.curio.nl/hulp-nodig/service-en-contact" target="_blank" rel="noopener">CONTACT</a>
+    </nav>
+  </header>
 
-  <!-- Footer -->
+  <main>
+
+    <!-- ==========================================================
+         Hero
+         ========================================================== -->
+    <section class="hero">
+      <p class="breadcrumb">Home › Open dag › Software Developer</p>
+      <h1>Software Developer</h1>
+      <div class="info">
+        <span>GEMAAKT DOOR<br>Timo van Eck</span>
+        <span>JAAR<br>2</span>
+        <span>NIVEAU<br>4</span>
+      </div>
+      <div class="knoppen">
+        <a class="knop" href="#vakken">Mijn ervaring ↓</a>
+        <a class="knop" href="https://www.curio.nl/mbo/studiekeuze/open-dagen" target="_blank" rel="noopener">Open dagen ↗</a>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         Intro + foto's
+         ========================================================== -->
+    <section class="intro">
+      <h2>In het kort</h2>
+      <p>Bij Software Developer leer je apps en websites maken. Je leert programmeren en werkt samen aan echte projecten, net zoals bij een echt bedrijf. Je leert verschillende programmeertalen kennen en hoe je een probleem stap voor stap oplost met code. Ook leer je samenwerken in een team, want software maken doe je bijna nooit alleen. Naast programmeren komt ook design en gebruiksvriendelijkheid aan bod: hoe zorg je dat een app of website fijn is om te gebruiken? Na de opleiding kun je aan de slag als software developer, of je kiest voor een vervolgstudie.</p>
+      <div class="fotos">
+        <img class="zoombaar" src="assets/img/opleiding/software-development-in-actie.jpg" alt="Student aan het programmeren op laptop en scherm" width="1200" height="800">
+        <img class="zoombaar" src="assets/img/locatie/curio-terheijdenseweg-buiten.jpg" alt="Curio locatie Terheijdenseweg 350 in Breda" width="1200" height="800" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         Vakken (mijn ervaring)
+         ========================================================== -->
+    <section class="vakken" id="vakken">
+
+      <article class="vak geel">
+        <h3 class="vak-titel">Sfeer op de afdeling</h3>
+        <p class="vak-tekst">Iedereen doet hier best wel zijn eigen ding en heeft veel eigen verantwoordelijkheid. Er wordt genoeg gekletst en gezellig gedaan, en de sfeer is ontspannen, maar op een gegeven moment moet je toch echt aan het werk en je projecten afmaken. Die balans tussen vrijheid en verantwoordelijkheid vind ik wel prettig.</p>
+      </article>
+
+      <article class="vak paars">
+        <h3 class="vak-titel">Wat vind ik van de opleiding</h3>
+        <p class="vak-tekst">Ik vind het soms best pittig, maar wel leuk en interessant. Je begint met bijna niks en kunt uiteindelijk zelf alles bouwen, en je leert steeds beter hoe een computer dingen precies verwerkt. Vooral het moment waarop iets wat je zelf gemaakt hebt, echt werkt, geeft een goed gevoel.</p>
+      </article>
+
+      <article class="vak oranje">
+        <h3 class="vak-titel">Rooster eerstejaars</h3>
+        <p class="vak-tekst">Hieronder zie je een week uit het rooster van leerjaar 1 op de Terheijdenseweg 350 (THW350). Op maandag, dinsdag en donderdag heb je vooral Fundament 1: WEB, met daarnaast Rekenen, Nederlands en Burgerschap. Woensdag en vrijdag staan in het teken van Challenges en Masterclasses. De lessen vallen tussen 08:30 en 16:30.</p>
+      </article>
+
+      <article class="vak roze">
+        <h3 class="vak-titel">Groepswerk</h3>
+        <p class="vak-tekst">Groepswerk speelt een grote rol, vooral in de praktijk wordt heel veel samen gedaan. Zo gaat het later op de werkvloer ook: het is belangrijk dat je met allerlei verschillende mensen kunt samenwerken, ook als je dat zelf niet altijd zou willen. Je leert daardoor niet alleen programmeren, maar ook overleggen en plannen.</p>
+      </article>
+
+      <article class="vak blauw">
+        <h3 class="vak-titel">Huiswerk</h3>
+        <p class="vak-tekst">Huiswerk ligt volledig aan jezelf: hoe meer je in de les af maakt, hoe minder huiswerk je hebt. Het is in mijn ervaring niet heel veel, meestal 1 tot 3 uur per dag, heel soms 4. Hoeveel tijd het kost, hangt dus ook af van hoeveel je er zelf voor kiest te doen. Samenwerkopdrachten doe je via GitHub, en communiceren met je groepje gaat via Teams.</p>
+      </article>
+
+    </section>
+
+    <!-- ==========================================================
+         Rooster afbeelding
+         ========================================================== -->
+    <section class="rooster-vak">
+      <h2>Voorbeeld rooster eerste leerjaar</h2>
+      <div class="rooster-scroll">
+        <img class="rooster-img zoombaar" src="assets/img/opleiding/rooster-eerste-leerjaar.png" alt="Rooster eerste leerjaar Software Developer" width="1418" height="636" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         CTA (call to action)
+         ========================================================== -->
+    <section class="cta">
+      <a href="https://www.curio.nl/mbo/ict/ict/software-developer" target="_blank" rel="noopener">
+        Meer weten over de opleiding? ↗
+        <span>Bezoek curio.nl/mbo/ict/ict/software-developer</span>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================
+       Footer
+       ========================================================== -->
   <footer>
     <div class="footer-inner">
-      <img class="footer-logo" src="assets/img/logo/curio-logo-geel.png" alt="curio">
-      <div class="footer-links">
-        <a href="https://www.curio.nl/mbo" target="_blank">MBO</a>
-        <a href="https://www.curio.nl/vmbo" target="_blank">VMBO</a>
-        <a href="https://www.curio.nl/hulp-nodig/service-en-contact" target="_blank">CONTACT</a>
-      </div>
+      <img class="footer-logo" src="assets/img/logo/curio-logo-geel.png" alt="Curio" width="400" height="140" loading="lazy">
+      <nav class="footer-links">
+        <a href="https://www.curio.nl/mbo" target="_blank" rel="noopener">MBO</a>
+        <a href="https://www.curio.nl/vmbo" target="_blank" rel="noopener">VMBO</a>
+        <a href="https://www.curio.nl/hulp-nodig/service-en-contact" target="_blank" rel="noopener">CONTACT</a>
+      </nav>
       <div class="footer-divider"></div>
-      <p class="footer-copy">&copy; <?php echo date("Y"); ?> Curio Software Developer</p>
+      <p class="footer-copy">&copy; <?php echo date('Y'); ?> Curio Software Developer</p>
     </div>
   </footer>
 
-  <dialog class="lightbox" id="lightbox">
+  <!-- ==========================================================
+       Lightbox (vergrote afbeelding)
+       ========================================================== -->
+  <dialog class="lightbox" id="lightbox" aria-label="Vergrote afbeelding">
     <button class="lightbox-sluit" aria-label="Sluiten">✕</button>
-    <img src="" alt="">
+    <img alt="">
   </dialog>
 
   <script>
+    // Lightbox: klik (of Enter) op een afbeelding met class "zoombaar" om hem groot te tonen.
+    // Sluiten: klik/tik ergens, de ✕-knop of Esc.
     const lightbox = document.getElementById('lightbox');
     const grootImg = lightbox.querySelector('img');
 
-    document.querySelectorAll('.fotos img, .rooster-img').forEach(function (img) {
+    function openLightbox(img) {
+      grootImg.src = img.src;
+      grootImg.alt = img.alt;
+      // Het rooster is heel breed: op mobiel groter tonen met opzij scrollen
+      lightbox.classList.toggle('breed', img.classList.contains('rooster-img'));
+      lightbox.showModal();
+    }
+
+    document.querySelectorAll('.zoombaar').forEach(function (img) {
+      img.tabIndex = 0;
       img.addEventListener('click', function () {
-        grootImg.src = img.src;
-        grootImg.alt = img.alt;
-        lightbox.classList.toggle('breed', img.classList.contains('rooster-img'));
-        lightbox.showModal();
+        openLightbox(img);
+      });
+      img.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(img);
+        }
       });
     });
 
