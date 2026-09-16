@@ -531,7 +531,7 @@
 
       <article class="vak oranje">
         <h3 class="vak-titel">Rooster eerstejaars</h3>
-        <p class="vak-tekst">Hieronder zie je een week uit het rooster van leerjaar 1 op de Terheijdenseweg 350 (THW350). Op maandag, dinsdag en donderdag heb je vooral Fundament 1: WEB, met daarnaast Rekenen, Nederlands en Burgerschap. Woensdag en vrijdag staan in het teken van Challenges en Masterclasses. De lessen vallen tussen 08:30 en 16:30.</p>
+        <p class="vak-tekst">Hieronder zie je een week uit het rooster van leerjaar 1 op de Terheijdenseweg 350. Op maandag, dinsdag en donderdag heb je vooral Fundament 1: WEB, met daarnaast Rekenen, Nederlands en Burgerschap. Woensdag en vrijdag staan in het teken van Challenges en Masterclasses. De lessen vallen tussen 08:30 en 16:30.</p>
       </article>
 
       <article class="vak roze">
